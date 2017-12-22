@@ -1,0 +1,57 @@
+// Zahin Roja
+// ovember 27, 2017
+// Program that uses array
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+        int i;
+        int counter=0;
+        double grades[100];
+        double average, temp, total =0;
+
+        //init
+        for (i =0; i<100;i++)
+        {
+                grades[i] = 0;
+        }
+
+        //input
+        for (i=0; i < 100; i++)
+        {
+                cout <<"Enter a student grade (0-100) ; " ;
+                cin >> temp;
+
+                if (temp != -1)
+                {
+                        grades[i] = temp;
+                        counter++;
+                }
+                else
+                {
+                        break;
+                }
+
+        }
+
+        //output
+        for(i=0; i<counter; i++)
+        {
+                cout << grades[i] << endl;
+          }
+
+        //processing
+        for (i =0 ; i<counter ; i++)
+        {
+                total = total + grades[i];
+        }
+        average = total / counter;
+        cout << "The average of the grades was " << average << endl;
+
+        return 0;
+}
+
+
+       
